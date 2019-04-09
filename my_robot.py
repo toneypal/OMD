@@ -25,7 +25,7 @@ import platform
 # print("os.cpu_count = ", os.cpu_count())
 # print('\n')
 
-print( '\n', "Ваше имя?")
+print('\n', "Ваше имя?")
 name = input()
 
 print("Привет,", name, '\n')
@@ -54,7 +54,7 @@ while answer != 'q':
 
             choise = input("Введите ваш выбор:")
             # print(type(choise), type(int))
-            if  type(choise) is not int and int(choise) not in CHOISE:
+            if type(choise) is not int and int(choise) not in CHOISE:
                 print(type(int(choise)), type(choise))
                 print("Answer is not recognazed")
 
@@ -70,7 +70,8 @@ while answer != 'q':
                 print("Имя ОС: ", platform.system())
                 print("Логин пользователя: ", os.getlogin())
                 print("Имя текущей директории: ", os.getcwd())
-                print("Название кодировки файловой системы: ", sys.getfilesystemencoding())
+                print("Название кодировки файловой системы: ",
+                      sys.getfilesystemencoding())
                 print('\n')
 
             elif int(choise) == 3:
@@ -103,7 +104,6 @@ while answer != 'q':
                 print("Answer is not recognazed")
                 # break
 
-
             # file_list = os.listdir()
             # i = 0
             # while i < len(file_list):
@@ -119,7 +119,6 @@ while answer != 'q':
         else:
             print("Answer is not recognazed")
 
-    except Exception as e:
+    except Exception:
         print("Некорректный ввод!")
         # print(f'e = {e} /n trace: {e.with_traceback()}')
-
